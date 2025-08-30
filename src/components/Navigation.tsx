@@ -38,7 +38,7 @@ const Navigation = () => {
             className="flex items-center gap-2 font-bold text-xl text-foreground hover:text-primary transition-colors"
           >
             <Database className="w-6 h-6 text-primary" />
-            MongoDB<span className="text-primary">Dev</span>
+            Jira<span className="text-primary">Expert</span>
           </button>
 
           {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ const Navigation = () => {
               onClick={() => scrollToSection('contact')}
               className="bg-primary hover:bg-primary/90 text-primary-foreground px-6"
             >
-              Hire Me
+              Get Consultation
             </Button>
           </div>
 
@@ -88,7 +88,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection('contact')}
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground mt-4"
               >
-                Hire Me
+                Get Consultation
               </Button>
             </div>
           </div>

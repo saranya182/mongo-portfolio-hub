@@ -1,29 +1,36 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Database, Server, Code, Zap } from "lucide-react";
+import { Settings, Users, BarChart3, Workflow, Target, CheckCircle } from "lucide-react";
 
 const About = () => {
   const skills = [
     {
-      category: "Database",
-      icon: Database,
-      items: ["MongoDB", "Mongoose", "Atlas", "Compass", "Aggregation Pipeline", "Indexing"]
+      category: "Jira Administration",
+      icon: Settings,
+      items: ["Workflow Design", "Custom Fields", "Screens & Schemes", "User Management", "Permissions", "Integrations"]
     },
     {
-      category: "Backend",
-      icon: Server,
-      items: ["Node.js", "Express.js", "NestJS", "GraphQL", "REST APIs", "Microservices"]
+      category: "Agile Coaching",
+      icon: Users,
+      items: ["Scrum Master", "SAFe Framework", "Kanban", "Sprint Planning", "Retrospectives", "Team Facilitation"]
     },
     {
-      category: "Frontend",
-      icon: Code,
-      items: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Redux", "React Query"]
+      category: "Analytics & Reporting",
+      icon: BarChart3,
+      items: ["Custom Dashboards", "JQL Queries", "Velocity Reports", "Burndown Charts", "Portfolio Metrics", "KPI Tracking"]
     },
     {
-      category: "Tools & Cloud",
-      icon: Zap,
-      items: ["Docker", "AWS", "Vercel", "Git", "Jest", "MongoDB Atlas"]
+      category: "Automation & Tools",
+      icon: Workflow,
+      items: ["Jira Automation", "Confluence", "Bitbucket", "JSM", "ScriptRunner", "API Integrations"]
     }
+  ];
+
+  const certifications = [
+    { name: "Atlassian Certified Jira Administrator", status: "Active" },
+    { name: "Certified Scrum Master (CSM)", status: "Active" },
+    { name: "SAFe Program Consultant (SPC)", status: "Active" },
+    { name: "Atlassian Certified Confluence Administrator", status: "Active" }
   ];
 
   return (
@@ -36,9 +43,9 @@ const About = () => {
               About <span className="text-primary">Me</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Passionate MongoDB developer with 5+ years of experience building scalable, 
-              high-performance applications. I specialize in designing efficient database schemas 
-              and optimizing queries for maximum performance.
+              Certified Jira Administrator and Agile Coach with 8+ years of experience optimizing 
+              enterprise workflows, coaching high-performing teams, and implementing scalable 
+              project management solutions across diverse industries.
             </p>
           </div>
 
@@ -67,22 +74,62 @@ const About = () => {
             ))}
           </div>
 
-          {/* Experience Highlight */}
+          {/* Experience & Certifications */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            {/* Experience Metrics */}
+            <Card className="p-8 bg-card-gradient border-border/20">
+              <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+                <Target className="w-6 h-6 text-primary" />
+                Impact & Results
+              </h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Projects Delivered</span>
+                  <span className="text-2xl font-bold text-primary">500+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Teams Coached</span>
+                  <span className="text-2xl font-bold text-primary">50+</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">On-Time Delivery Rate</span>
+                  <span className="text-2xl font-bold text-primary">95%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground">Team Productivity Increase</span>
+                  <span className="text-2xl font-bold text-primary">40%</span>
+                </div>
+              </div>
+            </Card>
+
+            {/* Certifications */}
+            <Card className="p-8 bg-card-gradient border-border/20">
+              <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-3">
+                <CheckCircle className="w-6 h-6 text-primary" />
+                Certifications
+              </h3>
+              <div className="space-y-4">
+                {certifications.map((cert) => (
+                  <div key={cert.name} className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/20 transition-colors">
+                    <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
+                    <div>
+                      <div className="font-medium text-foreground">{cert.name}</div>
+                      <div className="text-sm text-success">Status: {cert.status}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Card>
+          </div>
+
+          {/* Philosophy */}
           <Card className="p-8 bg-card-gradient border-border/20 text-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2">5+</div>
-                <div className="text-muted-foreground">Years Experience</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                <div className="text-muted-foreground">Projects Completed</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary mb-2">10M+</div>
-                <div className="text-muted-foreground">Records Processed</div>
-              </div>
-            </div>
+            <h3 className="text-2xl font-semibold text-foreground mb-4">My Philosophy</h3>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              "Great project management isn't about following processes—it's about empowering teams 
+              to deliver exceptional results. I believe in simplifying complexity, fostering collaboration, 
+              and using data-driven insights to continuously improve delivery outcomes."
+            </p>
           </Card>
         </div>
       </div>

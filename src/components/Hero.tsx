@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
+import heroImage from "@/assets/jira-hero-bg.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -24,28 +24,44 @@ const Hero = () => {
           {/* Main Heading */}
           <div className="space-y-6 mb-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              <span className="text-foreground">MongoDB</span>
+              <span className="text-foreground">Jira</span>
               <br />
-              <span className="text-primary font-extrabold">Developer</span>
+              <span className="text-primary font-extrabold">Expert</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Full-stack developer specializing in MongoDB, NoSQL databases, and modern web applications. 
-              Building scalable solutions with cutting-edge technology.
+              Certified Jira Administrator & Agile Coach specializing in workflow optimization, 
+              automation, and enterprise-scale project management solutions.
             </p>
           </div>
 
-          {/* Tech Stack Highlight */}
+          {/* Certifications & Badges */}
           <div className="mb-8">
             <div className="flex flex-wrap justify-center gap-3 mb-6">
-              {['MongoDB', 'Node.js', 'React', 'Express', 'TypeScript', 'GraphQL'].map((tech) => (
+              {['Jira Admin', 'Scrum Master', 'SAFe', 'Agile Coach', 'Confluence', 'JSM'].map((cert) => (
                 <span 
-                  key={tech}
+                  key={cert}
                   className="px-4 py-2 bg-secondary/50 backdrop-blur-sm rounded-full text-sm font-medium border border-border/30 hover:border-primary/30 transition-all duration-300"
                 >
-                  {tech}
+                  {cert}
                 </span>
               ))}
+            </div>
+          </div>
+
+          {/* Key Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-1">500+</div>
+              <div className="text-sm text-muted-foreground">Projects Managed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-1">50+</div>
+              <div className="text-sm text-muted-foreground">Teams Coached</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary mb-1">95%</div>
+              <div className="text-sm text-muted-foreground">On-Time Delivery</div>
             </div>
           </div>
 
@@ -56,7 +72,7 @@ const Hero = () => {
               className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
               onClick={() => scrollToSection('projects')}
             >
-              View My Work
+              View Case Studies
             </Button>
             <Button 
               variant="outline" 
@@ -64,7 +80,7 @@ const Hero = () => {
               className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 px-8 py-3 rounded-lg transition-all duration-300"
               onClick={() => scrollToSection('contact')}
             >
-              Get In Touch
+              Schedule Consultation
             </Button>
           </div>
 

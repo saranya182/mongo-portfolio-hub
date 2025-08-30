@@ -8,45 +8,48 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Portfolio Dark Theme - MongoDB Inspired */
-    --background: 220 26% 6%;
+    /* Jira Portfolio Theme - Atlassian Blue Inspired */
+    --background: 244 6% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 220 24% 8%;
+    --card: 244 6% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 24% 8%;
+    --popover: 244 6% 12%;
     --popover-foreground: 0 0% 98%;
 
-    /* MongoDB Green Primary */
-    --primary: 142 100% 46%;
-    --primary-foreground: 220 26% 6%;
+    /* Atlassian Blue Primary */
+    --primary: 214 100% 59%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 14%;
+    --secondary: 244 6% 16%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 20% 12%;
+    --muted: 244 6% 14%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 142 76% 36%;
+    --accent: 214 85% 65%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 12%;
-    --ring: 142 100% 46%;
+    --border: 244 6% 20%;
+    --input: 244 6% 14%;
+    --ring: 214 100% 59%;
 
     --radius: 0.75rem;
 
-    /* Portfolio Specific Colors */
-    --mongodb-green: 142 100% 46%;
-    --mongodb-dark-green: 142 76% 36%;
-    --code-bg: 220 24% 10%;
-    --hero-gradient: linear-gradient(135deg, hsl(220 26% 6%) 0%, hsl(220 24% 10%) 50%, hsl(142 76% 36% / 0.1) 100%);
-    --card-gradient: linear-gradient(145deg, hsl(220 24% 8% / 0.8) 0%, hsl(220 20% 12% / 0.4) 100%);
-    --glow-green: 142 100% 46% / 0.3;
+    /* Jira Specific Colors */
+    --jira-blue: 214 100% 59%;
+    --jira-dark-blue: 214 85% 45%;
+    --jira-light-blue: 214 100% 85%;
+    --success-green: 142 71% 45%;
+    --warning-orange: 35 91% 62%;
+    --code-bg: 244 6% 10%;
+    --hero-gradient: linear-gradient(135deg, hsl(244 6% 10%) 0%, hsl(244 6% 14%) 50%, hsl(214 100% 59% / 0.1) 100%);
+    --card-gradient: linear-gradient(145deg, hsl(244 6% 12% / 0.8) 0%, hsl(244 6% 16% / 0.4) 100%);
+    --glow-blue: 214 100% 59% / 0.3;
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -55,25 +58,25 @@ All colors MUST be HSL.
 
   .dark {
     /* Keep the same dark theme as default */
-    --background: 220 26% 6%;
+    --background: 244 6% 10%;
     --foreground: 0 0% 98%;
-    --card: 220 24% 8%;
+    --card: 244 6% 12%;
     --card-foreground: 0 0% 98%;
-    --popover: 220 24% 8%;
+    --popover: 244 6% 12%;
     --popover-foreground: 0 0% 98%;
-    --primary: 142 100% 46%;
-    --primary-foreground: 220 26% 6%;
-    --secondary: 220 20% 14%;
+    --primary: 214 100% 59%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 244 6% 16%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 220 20% 12%;
+    --muted: 244 6% 14%;
     --muted-foreground: 0 0% 65%;
-    --accent: 142 76% 36%;
+    --accent: 214 85% 65%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 20% 18%;
-    --input: 220 20% 12%;
-    --ring: 142 100% 46%;
+    --border: 244 6% 20%;
+    --input: 244 6% 14%;
+    --ring: 214 100% 59%;
   }
 }
 

@@ -12,12 +12,12 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-4">
               <Database className="w-6 h-6 text-primary" />
               <span className="font-bold text-xl text-foreground">
-                MongoDB<span className="text-primary">Dev</span>
+                Jira<span className="text-primary">Expert</span>
               </span>
             </div>
             <p className="text-muted-foreground mb-4 max-w-md">
-              Full-stack MongoDB developer passionate about building scalable, 
-              high-performance applications with modern web technologies.
+              Certified Jira Administrator and Agile Coach passionate about optimizing 
+              enterprise workflows and empowering high-performing teams.
             </p>
             <div className="flex gap-4">
               {[
@@ -57,7 +57,7 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Technologies</h3>
             <div className="space-y-2 text-muted-foreground">
-              {['MongoDB', 'Node.js', 'React', 'TypeScript'].map((tech) => (
+              {['Jira Administration', 'Agile Coaching', 'Workflow Design', 'Team Training'].map((tech) => (
                 <div key={tech} className="text-sm">{tech}</div>
               ))}
             </div>
@@ -67,10 +67,10 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-border/20 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} MongoDB Developer. All rights reserved.
+            © {currentYear} Jira Expert. All rights reserved.
           </p>
           <p className="text-muted-foreground text-sm flex items-center gap-1">
-            Made with <Heart className="w-4 h-4 text-red-500 fill-current" /> using MongoDB & React
+            Made with <Heart className="w-4 h-4 text-red-500 fill-current" /> using Jira & React
           </p>
         </div>
       </div>

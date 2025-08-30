@@ -37,8 +37,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "hello@mongodbdev.com",
-      href: "mailto:hello@mongodbdev.com"
+      value: "hello@jiraexpert.com",
+      href: "mailto:hello@jiraexpert.com"
     },
     {
       icon: Phone,
@@ -61,11 +61,11 @@ const Contact = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Let's <span className="text-primary">Connect</span>
+              Let's <span className="text-primary">Collaborate</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ready to discuss your next MongoDB project? Whether you need database design, 
-              performance optimization, or full-stack development, I'm here to help.
+              Ready to optimize your Jira workflows or transform your agile practices? 
+              Let's discuss how I can help streamline your project management and boost team productivity.
             </p>
           </div>
 
@@ -189,8 +189,8 @@ const Contact = () => {
                   <span className="text-foreground font-medium">Available for Projects</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  Currently accepting new MongoDB development projects. 
-                  Let's build something amazing together!
+                  Currently accepting new Jira consulting projects. 
+                  Let's optimize your workflows together!
                 </p>
               </Card>
             </div>

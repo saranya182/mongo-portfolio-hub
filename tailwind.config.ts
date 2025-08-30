@@ -63,11 +63,14 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				/* Portfolio Custom Colors */
-				mongodb: {
-					DEFAULT: 'hsl(var(--mongodb-green))',
-					dark: 'hsl(var(--mongodb-dark-green))',
-					glow: 'hsl(var(--glow-green))'
+				jira: {
+					DEFAULT: 'hsl(var(--jira-blue))',
+					dark: 'hsl(var(--jira-dark-blue))',
+					light: 'hsl(var(--jira-light-blue))',
+					glow: 'hsl(var(--glow-blue))'
 				},
+				success: 'hsl(var(--success-green))',
+				warning: 'hsl(var(--warning-orange))',
 				'code-bg': 'hsl(var(--code-bg))'
 			},
 			backgroundImage: {
@@ -75,8 +78,8 @@ export default {
 				'card-gradient': 'var(--card-gradient)'
 			},
 			boxShadow: {
-				'glow': '0 0 20px hsl(var(--glow-green))',
-				'glow-lg': '0 0 40px hsl(var(--glow-green))',
+				'glow': '0 0 20px hsl(var(--glow-blue))',
+				'glow-lg': '0 0 40px hsl(var(--glow-blue))',
 				'card-hover': '0 10px 30px -10px hsl(var(--primary) / 0.3)'
 			},
 			transitionTimingFunction: {
