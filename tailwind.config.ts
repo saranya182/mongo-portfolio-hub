@@ -61,7 +61,27 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				/* Portfolio Custom Colors */
+				mongodb: {
+					DEFAULT: 'hsl(var(--mongodb-green))',
+					dark: 'hsl(var(--mongodb-dark-green))',
+					glow: 'hsl(var(--glow-green))'
+				},
+				'code-bg': 'hsl(var(--code-bg))'
+			},
+			backgroundImage: {
+				'hero-gradient': 'var(--hero-gradient)',
+				'card-gradient': 'var(--card-gradient)'
+			},
+			boxShadow: {
+				'glow': '0 0 20px hsl(var(--glow-green))',
+				'glow-lg': '0 0 40px hsl(var(--glow-green))',
+				'card-hover': '0 10px 30px -10px hsl(var(--primary) / 0.3)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',
+				'bounce': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
