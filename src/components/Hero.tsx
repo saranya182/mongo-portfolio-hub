@@ -23,22 +23,13 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-card-gradient backdrop-blur-sm border-border/20 shadow-glow-lg">
-          {/* Profile Photo */}
-          <div className="mb-6 flex justify-center">
-            <div className="relative">
-              <img 
-                src={profilePhoto} 
-                alt="M Saranya - Jira Expert" 
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/20 shadow-glow"
-              />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-t from-primary/10 to-transparent" />
-            </div>
-          </div>
-
-          {/* Greeting & Main Heading */}
-          <div className="space-y-4 mb-8">
+      <div className="relative z-10 container mx-auto px-4">
+        <Card className="max-w-6xl mx-auto p-8 md:p-12 bg-card-gradient backdrop-blur-sm border-border/20 shadow-glow-lg">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            {/* Main Content */}
+            <div className="lg:col-span-2 text-center lg:text-left">
+              {/* Greeting & Main Heading */}
+              <div className="space-y-4 mb-8">
             <div className="text-2xl md:text-3xl text-primary font-medium animate-fade-in">
               Hii! 👋
             </div>
@@ -57,7 +48,7 @@ const Hero = () => {
 
           {/* Certifications & Badges */}
           <div className="mb-8">
-            <div className="flex flex-wrap justify-center gap-3 mb-6">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6">
               {['Jira Admin', 'Scrum Master', 'SAFe', 'Agile Coach', 'Confluence', 'JSM'].map((cert) => (
                 <span 
                   key={cert}
@@ -71,58 +62,72 @@ const Hero = () => {
 
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
+            <div className="text-center lg:text-left">
               <div className="text-3xl font-bold text-primary mb-1">500+</div>
               <div className="text-sm text-muted-foreground">Projects Managed</div>
             </div>
-            <div className="text-center">
+            <div className="text-center lg:text-left">
               <div className="text-3xl font-bold text-primary mb-1">50+</div>
               <div className="text-sm text-muted-foreground">Teams Coached</div>
             </div>
-            <div className="text-center">
+            <div className="text-center lg:text-left">
               <div className="text-3xl font-bold text-primary mb-1">95%</div>
               <div className="text-sm text-muted-foreground">On-Time Delivery</div>
             </div>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button 
-              size="lg" 
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
-              onClick={() => scrollToSection('projects')}
-            >
-              View Case Studies
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 px-8 py-3 rounded-lg transition-all duration-300"
-              onClick={() => scrollToSection('contact')}
-            >
-              Schedule Consultation
-            </Button>
-          </div>
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                <Button 
+                  size="lg" 
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-3 rounded-lg shadow-glow hover:shadow-glow-lg transition-all duration-300"
+                  onClick={() => scrollToSection('projects')}
+                >
+                  View Case Studies
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-primary/30 text-foreground hover:bg-primary/10 hover:border-primary/50 px-8 py-3 rounded-lg transition-all duration-300"
+                  onClick={() => scrollToSection('contact')}
+                >
+                  Schedule Consultation
+                </Button>
+              </div>
 
-          {/* Social Links */}
-          <div className="flex justify-center gap-6">
-            {[
-              { icon: faGithub, href: "https://github.com/saranya182", label: "GitHub", target: "_blank" },
-              { icon: faLinkedin, href: "https://www.linkedin.com/in/saranya-m-83a1b9242/", label: "LinkedIn", target: "_blank" },
-              { icon: faEnvelope, href: "mailto:saranya21022004@gmail.com", label: "Email" },
-              { icon: faFileAlt, href: "https://drive.google.com/file/d/1xTNEIZXB6WNUNmc7tppDDQrHbKZr0isN/view?usp=sharing", label: "Resume", target: "_blank" }
-            ].map(({ icon, href, label, target }) => (
-              <a
-                key={label}
-                href={href}
-                target={target}
-                rel={target ? "noopener noreferrer" : undefined}
-                className="p-3 rounded-full bg-secondary/30 backdrop-blur-sm border border-border/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 group"
-                aria-label={label}
-              >
-                <FontAwesomeIcon icon={icon} className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
-              </a>
-            ))}
+              {/* Social Links */}
+              <div className="flex justify-center lg:justify-start gap-6">
+                {[
+                  { icon: faGithub, href: "https://github.com/saranya182", label: "GitHub", target: "_blank" },
+                  { icon: faLinkedin, href: "https://www.linkedin.com/in/saranya-m-83a1b9242/", label: "LinkedIn", target: "_blank" },
+                  { icon: faEnvelope, href: "mailto:saranya21022004@gmail.com", label: "Email" },
+                  { icon: faFileAlt, href: "https://drive.google.com/file/d/1xTNEIZXB6WNUNmc7tppDDQrHbKZr0isN/view?usp=sharing", label: "Resume", target: "_blank" }
+                ].map(({ icon, href, label, target }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target={target}
+                    rel={target ? "noopener noreferrer" : undefined}
+                    className="p-3 rounded-full bg-secondary/30 backdrop-blur-sm border border-border/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 group"
+                    aria-label={label}
+                  >
+                    <FontAwesomeIcon icon={icon} className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Profile Photo - Right Side */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative">
+                <img 
+                  src={profilePhoto} 
+                  alt="M Saranya - Jira Expert" 
+                  className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full object-cover border-4 border-primary/20 shadow-glow"
+                />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-t from-primary/10 to-transparent" />
+              </div>
+            </div>
           </div>
         </Card>
 
