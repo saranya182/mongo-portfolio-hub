@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import heroImage from "@/assets/jira-hero-bg.jpg";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -21,15 +22,30 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         <Card className="max-w-4xl mx-auto p-8 md:p-12 bg-card-gradient backdrop-blur-sm border-border/20 shadow-glow-lg">
-          {/* Main Heading */}
-          <div className="space-y-6 mb-8">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+          {/* Profile Photo */}
+          <div className="mb-6 flex justify-center">
+            <div className="relative">
+              <img 
+                src={profilePhoto} 
+                alt="M Saranya - Jira Expert" 
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/20 shadow-glow"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-t from-primary/10 to-transparent" />
+            </div>
+          </div>
+
+          {/* Greeting & Main Heading */}
+          <div className="space-y-4 mb-8">
+            <div className="text-2xl md:text-3xl text-primary font-medium animate-fade-in">
+              Hii! 👋
+            </div>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
               <span className="text-primary font-extrabold">M Saranya</span>
               <br />
-              <span className="text-foreground">Jira Expert</span>
+              <span className="text-foreground text-2xl md:text-4xl lg:text-5xl">Jira Expert</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Certified Jira Administrator & Agile Coach with 8+ years transforming complex workflows 
               into seamless processes. Passionate about empowering teams through innovative automation 
               and data-driven project excellence.
@@ -88,9 +104,9 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6">
             {[
-              { icon: Github, href: "#", label: "GitHub" },
-              { icon: Linkedin, href: "#", label: "LinkedIn" },
-              { icon: Mail, href: "#", label: "Email" }
+              { icon: Github, href: "https://github.com/saranya182", label: "GitHub" },
+              { icon: Linkedin, href: "https://www.linkedin.com/in/saranya-m-83a1b9242/", label: "LinkedIn" },
+              { icon: Mail, href: "mailto:saranya21022004@gmail.com", label: "Email" }
             ].map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
