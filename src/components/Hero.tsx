@@ -24,14 +24,15 @@ const Hero = () => {
           {/* Main Heading */}
           <div className="space-y-6 mb-8">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-              <span className="text-foreground">Jira</span>
+              <span className="text-primary font-extrabold">M Saranya</span>
               <br />
-              <span className="text-primary font-extrabold">Expert</span>
+              <span className="text-foreground">Jira Expert</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Certified Jira Administrator & Agile Coach specializing in workflow optimization, 
-              automation, and enterprise-scale project management solutions.
+              Certified Jira Administrator & Agile Coach with 8+ years transforming complex workflows 
+              into seamless processes. Passionate about empowering teams through innovative automation 
+              and data-driven project excellence.
             </p>
           </div>
 
