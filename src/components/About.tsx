@@ -108,7 +108,7 @@ const About = () => {
                 <CheckCircle className="w-6 h-6 text-primary" />
                 Certifications
               </h3>
-              <div className="space-y-4">
+              <div className="space-y-4 mb-6">
                 {certifications.map((cert) => (
                   <div key={cert.name} className="flex items-start gap-3 p-3 rounded-lg hover:bg-secondary/20 transition-colors">
                     <CheckCircle className="w-5 h-5 text-success mt-0.5 flex-shrink-0" />
@@ -118,6 +118,16 @@ const About = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+              <div className="pt-4 border-t border-border/20">
+                <a
+                  href="https://drive.google.com/uc?export=download&id=1xTNEIZXB6WNUNmc7tppDDQrHbKZr0isN"
+                  download
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  <CheckCircle className="w-5 h-5" />
+                  Download Resume
+                </a>
               </div>
             </Card>
           </div>

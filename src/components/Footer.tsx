@@ -22,7 +22,7 @@ const Footer = () => {
               Certified Jira Administrator and Agile Coach passionate about optimizing 
               enterprise workflows and empowering high-performing teams.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mb-4">
               {[
                 { icon: faGithub, href: "https://github.com/saranya182", label: "GitHub", target: "_blank" },
                 { icon: faLinkedin, href: "https://www.linkedin.com/in/saranya-m-83a1b9242/", label: "LinkedIn", target: "_blank" },
@@ -41,6 +41,14 @@ const Footer = () => {
                 </a>
               ))}
             </div>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1xTNEIZXB6WNUNmc7tppDDQrHbKZr0isN"
+              download
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground font-bold rounded-lg hover:bg-primary/90 transition-all duration-300 text-sm"
+            >
+              <FontAwesomeIcon icon={faFileAlt} className="w-4 h-4" />
+              Download Resume
+            </a>
           </div>
 
           {/* Quick Links */}
