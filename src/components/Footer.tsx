@@ -1,4 +1,7 @@
-import { Database, Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Database, Heart } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,17 +24,20 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               {[
-                { icon: Github, href: "#", label: "GitHub" },
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Mail, href: "#", label: "Email" }
-              ].map(({ icon: Icon, href, label }) => (
+                { icon: faGithub, href: "https://github.com/saranya182", label: "GitHub", target: "_blank" },
+                { icon: faLinkedin, href: "https://www.linkedin.com/in/saranya-m-83a1b9242/", label: "LinkedIn", target: "_blank" },
+                { icon: faEnvelope, href: "mailto:saranya21022004@gmail.com", label: "Email" },
+                { icon: faFileAlt, href: "https://drive.google.com/file/d/1xTNEIZXB6WNUNmc7tppDDQrHbKZr0isN/view?usp=sharing", label: "Resume", target: "_blank" }
+              ].map(({ icon, href, label, target }) => (
                 <a
                   key={label}
                   href={href}
+                  target={target}
+                  rel={target ? "noopener noreferrer" : undefined}
                   className="p-2 rounded-lg bg-secondary/30 hover:bg-primary/10 hover:text-primary transition-all duration-300"
                   aria-label={label}
                 >
-                  <Icon className="w-5 h-5" />
+                  <FontAwesomeIcon icon={icon} className="w-5 h-5" />
                 </a>
               ))}
             </div>

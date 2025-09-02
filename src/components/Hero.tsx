@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import heroImage from "@/assets/jira-hero-bg.jpg";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
@@ -104,17 +107,20 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center gap-6">
             {[
-              { icon: Github, href: "https://github.com/saranya182", label: "GitHub" },
-              { icon: Linkedin, href: "https://www.linkedin.com/in/saranya-m-83a1b9242/", label: "LinkedIn" },
-              { icon: Mail, href: "mailto:saranya21022004@gmail.com", label: "Email" }
-            ].map(({ icon: Icon, href, label }) => (
+              { icon: faGithub, href: "https://github.com/saranya182", label: "GitHub", target: "_blank" },
+              { icon: faLinkedin, href: "https://www.linkedin.com/in/saranya-m-83a1b9242/", label: "LinkedIn", target: "_blank" },
+              { icon: faEnvelope, href: "mailto:saranya21022004@gmail.com", label: "Email" },
+              { icon: faFileAlt, href: "https://drive.google.com/file/d/1xTNEIZXB6WNUNmc7tppDDQrHbKZr0isN/view?usp=sharing", label: "Resume", target: "_blank" }
+            ].map(({ icon, href, label, target }) => (
               <a
                 key={label}
                 href={href}
+                target={target}
+                rel={target ? "noopener noreferrer" : undefined}
                 className="p-3 rounded-full bg-secondary/30 backdrop-blur-sm border border-border/20 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300 group"
                 aria-label={label}
               >
-                <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                <FontAwesomeIcon icon={icon} className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
               </a>
             ))}
           </div>
